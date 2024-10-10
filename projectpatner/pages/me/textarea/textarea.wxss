@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.back-button {
+  padding: 10rpx;
+}
+
+.title {
+  margin-right: 300rpx;
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.input-area {
+  width: 100%;
+  margin-top: 0rpx; /* 调整输入区域的上边距 */
+}
+
+.memo-input {
+  width: 100%;
+  height: 300rpx;
+  border: none; /* 去掉边框 */
+  /*padding: 10rpx;*/
+  font-size: 28rpx;
+  box-sizing: border-box; /* 边框盒模型，确保padding不影响宽度 */
+}
+
+.scroll-y {
+  overflow-y: auto; /* 允许纵向滚动 */
+}

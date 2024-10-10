@@ -1,0 +1,32 @@
+/* pages/home/home.wxss */
+.divider {
+  height: 1rpx; /* 分隔线高度 */
+  background-color: #eee; /* 分隔线颜色 */
+  width: 100%; /* 分隔线宽度 */
+  margin-top: 0rpx; /* 分隔线与项目文字的间距 */
+}
+
+.container {
+  padding: 20px;
+}
+.search-box {
+  margin-bottom: 20px;
+}
+.project-list {
+  display: block;
+}
+.project-item {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.page__bd {
+  height: 100%; /* 根据需要设置合适的高度 */
+}
+
+.scroll-y {
+  overflow-y: auto; /* 允许纵向滚动 */
+}
+
+
+.weui-cell_example .weui-cell__hd image{width:20rpx;height:20rpx;display:block;margin-right:16px}

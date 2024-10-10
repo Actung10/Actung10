@@ -1,0 +1,34 @@
+<!--pages/search/search.wxml-->
+<!-- search.wxml -->
+<page-meta root-font-size="system"/>
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+  <navigation-bar title="Project Partener" back="{{true}}" color="black" background="#DEDEDE"></navigation-bar>
+  <view class="header">
+    <navigator class="back-button" url="javascript:;" bindtap="goBack">
+      <image class="icon" src="/static/button/back.png" />
+    </navigator>
+    <text class="title">项目搜素</text>
+  </view>
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">搜索结果</view>
+      <view class="divider" />
+      <view class="weui-panel__bd">
+        <block wx:for="{{filteredProjects}}" wx:key="id">
+          <navigator aria-labelledby="{{item.name}}" class="weui-media-box weui-media-box_appmsg" url="javascript:">
+            <view aria-hidden="true" class="weui-media-box__hd">
+              <image class="weui-media-box__thumb" src="/static/pic.png" alt></image>
+            </view>
+            <view aria-hidden="true" id="{{item.name}}" class="weui-media-box__bd">
+              <text class="weui-media-box__title">{{item.name}}</text>
+              <view class="weui-media-box__desc">{{item.introduction}}</view>
+            </view>
+          </navigator>
+          <view class="divider" />
+        </block>
+        <!-- 未搜索到结果的提示 -->
+        <view wx:if="{{noResult}}" class="weui-msg__text">未搜索到该结果</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

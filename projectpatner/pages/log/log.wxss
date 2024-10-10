@@ -1,0 +1,85 @@
+/* pages/log/log.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #FFFFFF; /* 设置背景为白色 */
+  padding-top: 60rpx;
+}
+
+.login-title {
+  margin-bottom: 150rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.input-group {
+  width: 90%; /* 调整输入框宽度 */
+  margin-bottom: 75rpx;
+}
+
+.input-label {
+  font-size: 32rpx;
+  color: #666;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.input-box {
+  border-bottom: 2rpx solid #ccc;
+  padding: 20rpx 0;
+  width: 100%; /* 调整横线长度 */
+}
+
+.input {
+  border: none;
+  width: 100%;
+  font-size: 32rpx;
+}
+
+.login-button {
+  width: 90%;
+  padding: 20rpx;
+  margin-top: 40rpx;
+  background-color: #4CAF50; /* 调整登录按钮的绿色 */
+  color: white;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+}
+
+.other-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 90%;
+  margin-top: 450rpx;
+}
+
+.action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* 按钮间有间隔 */
+}
+
+.action-button {
+  flex: 1; /* 让所有按钮占据相同的空间 */
+  background-color: #eee;
+  color: #333;
+  font-size: 32rpx;
+  border-radius: 10rpx;
+  border: none;
+  margin: 40rpx; /* 添加外边距 */
+}
+
+/* 第一个和最后一个按钮不需要左右边距，可以单独设置 */
+.action-buttons .action-button:first-child {
+  margin-right: 10rpx; /* 只添加右边距 */
+}
+
+.action-buttons .action-button:last-child {
+  margin-left: 10rpx; /* 只添加左边距 */
+}
+

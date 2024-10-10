@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/log/log",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/me/me",
+    "pages/project/project",
+    "pages/project/create/create",
+    "pages/me/textarea/textarea",
+    "pages/projectdetails/projectdetail/projectdetail",
+    "pages/projectdetails/projectdetail/apply",
+    "pages/projectdetails/createdproject/createdproject",
+    "pages/projectdetails/joinedproject/joinedproject",
+    "pages/projectdetails/modifyproject/modifyproject",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#DEDEDE",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "Project Partner"
+  },
+  "style": "v2",
+  "renderer": "skyline",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "disableABTest": true,
+      "sdkVersionBegin": "3.0.0",
+      "sdkVersionEnd": "15.255.255"
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/homeselect.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "消息",
+        "iconPath": "static/tabbar/message.png",
+        "selectedIconPath": "static/tabbar/messageselect.png"
+      },
+      {
+        "pagePath": "pages/project/project",
+        "text": "我的项目",
+        "iconPath": "static/tabbar/project.png",
+        "selectedIconPath": "static/tabbar/projectselect.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "个人",
+        "iconPath": "static/tabbar/me.png",
+        "selectedIconPath": "static/tabbar/meselect.png"
+      }
+    ]
+  },
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

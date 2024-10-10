@@ -1,0 +1,97 @@
+/* pages/projectdetails/projectdetail/projectdetail.wxss */
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 保证内容靠左对齐 */
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.back-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 245rpx;
+}
+
+.content {
+  width: 100%;
+}
+
+.divider {
+  height: 1rpx; /* 分隔线高度 */
+  background-color: #eee; /* 分隔线颜色 */
+  width: 100%; /* 分隔线宽度 */
+  margin-top: 20rpx; /* 分隔线与项目文字的间距 */
+}
+
+.project-info, .project-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.initiator, .mentor {
+  display: flex;
+  align-items: center;
+  margin-left: 0rpx;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+
+.avatar {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.members, .status {
+  display: flex;
+  align-items: center;
+  margin-right: 10rpx;
+  font-size: 30rpx;
+}
+
+.project-intro, .project-content {
+  margin-top: 20rpx;
+  /*padding: 20rpx;
+  background-color: #f8f8f8;*/
+  border-radius: 10rpx;
+}
+
+.intro-title, .content-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.join-button {
+  margin-top: 40rpx;
+}
+
+button {
+  position: fixed; /* 固定在底部 */
+  bottom: 20rpx; /* 底部间距 */
+  left: 50%; /* 横向50%的位置 */
+  transform: translateX(-50%); /* 向左移动自身宽度的50%，以实现居中 */
+  width: 80%; /* 宽度为80%屏幕宽度，可根据实际需要调整 */
+  padding: 20rpx; /* 按钮内边距 */
+  background-color: #1aad19; /* 按钮背景颜色 */
+  color: white; /* 文字颜色 */
+  border: none; /* 无边框 */
+  border-radius: 5rpx; /* 圆角边框 */
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); /* 按钮阴影，可选 */
+}

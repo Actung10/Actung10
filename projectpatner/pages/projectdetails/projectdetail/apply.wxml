@@ -1,0 +1,18 @@
+<!--pages/projectdetails/projectdetail/apply.wxml-->
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+  <navigation-bar title="Project Partener" back="{{false}}"
+ color="black" background="#DEDEDE"></navigation-bar>
+<view class="container">
+ <view class="header">
+    <image class="back-icon" src="/static/button/back.png" bindtap="goBack"/>
+    <text class="title">项目详情</text>
+  </view>
+ <view class="form-item">
+      <text class="item-label">申请理由</text>
+      <textarea class="textarea" placeholder="请输入申请理由" bindinput="inputProjectContent" />
+    </view>
+</view>
+</scroll-view>
+<view class="join-button">
+  <button bindtap="applyJoin">申请加入</button>
+</view>

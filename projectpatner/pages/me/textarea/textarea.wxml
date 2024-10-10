@@ -1,0 +1,17 @@
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+<navigation-bar title="Project Partener" back="{{false}}"
+ color="black" background="#DEDEDE"></navigation-bar>
+
+ <view class="container">
+  <view class="header">
+    <navigator class="back-button" url="javascript:;" bindtap="goBack">
+      <image class="icon" src="/static/button/back.png" />
+    </navigator>
+    <text class="title">备忘录</text>
+  </view>
+  <view class="input-area">
+    <textarea class="memo-input" placeholder="请输入备忘录内容..." auto-focus 
+              value="{{memo}}" bindinput="onInput" bindblur="onBlur"/>
+  </view>
+ </view>
+</scroll-view>

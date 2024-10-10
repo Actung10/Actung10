@@ -1,0 +1,63 @@
+/* pages/projectdetails/projectdetail/apply.wxss */
+.form-item {
+  margin-bottom: 20rpx;
+}
+
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 保证内容靠左对齐 */
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.back-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 245rpx;
+}
+
+.item-label {
+  margin-top:20rpx;
+  font-size: 32rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.textarea{
+  border: 3rpx solid #ddd;
+  margin-top: 20rpx;
+  padding: 10rpx;
+  border-radius: 5rpx;
+  font-size: 32rpx;
+  width: 700rpx;
+  height:1000rpx;
+  box-sizing: border-box;
+}
+
+button {
+  position: fixed; /* 固定在底部 */
+  bottom: 20rpx; /* 底部间距 */
+  left: 50%; /* 横向50%的位置 */
+  transform: translateX(-50%); /* 向左移动自身宽度的50%，以实现居中 */
+  width: 80%; /* 宽度为80%屏幕宽度，可根据实际需要调整 */
+  padding: 20rpx; /* 按钮内边距 */
+  background-color: #1aad19; /* 按钮背景颜色 */
+  color: white; /* 文字颜色 */
+  border: none; /* 无边框 */
+  border-radius: 5rpx; /* 圆角边框 */
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); /* 按钮阴影，可选 */
+}

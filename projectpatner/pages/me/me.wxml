@@ -1,0 +1,45 @@
+<!--pages/me/me.wxml-->
+<navigation-bar title="Project Partener" back="{{false}}"
+ color="black" background="#DEDEDE"></navigation-bar>
+
+ <scroll-view class="container" scroll-y type="list">
+  <view class="header">
+    <image class="avatar" src="{{avatarUrl}}" />
+    <view class="user-info">
+      <text class="username">{{username}}</text>
+      <text class="signature">{{signature}}</text>
+    </view>
+  </view>
+  <view class="projects">
+    <text>{{projectCount}} 参与项目</text>
+  </view>
+  <view class="divider" />
+  <view class="button-group">
+  <view class="custom-button-container">
+    <image class="icon left-icon" src="/static/button/personal.png" />
+    <text class="button-text">个人信息</text>
+    <image class="icon right-icon" src="/static/button/next.png" />
+  </view>
+  <view class="custom-button-container">
+    <image class="icon left-icon" src="/static/button/like.png" />
+    <text class="button-text">收藏</text>
+    <image class="icon right-icon" src="/static/button/next.png" />
+  </view>
+  <view class="custom-button-container" bindtap="gotomemo">
+    <image class="icon left-icon" src="/static/button/memo.png" />
+    <text class="button-text">备忘录</text>
+    <image class="icon right-icon" src="/static/button/next.png" />
+  </view>
+  <view class="custom-button-container">
+    <image class="icon left-icon" src="/static/button/help.png" />
+    <text class="button-text">帮助与反馈</text>
+    <image class="icon right-icon" src="/static/button/next.png" />
+  </view>
+  <view class="custom-button-container">
+    <image class="icon left-icon" src="/static/button/setting.png" />
+    <text class="button-text">设置</text>
+    <image class="icon right-icon" src="/static/button/next.png" />
+  </view>
+</view>
+</scroll-view>
+

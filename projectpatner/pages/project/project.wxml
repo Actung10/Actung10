@@ -1,0 +1,48 @@
+<!--pages/project/project.wxml-->
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+  <navigation-bar title="Project Partner" back="{{false}}" color="black" background="#DEDEDE"></navigation-bar>
+  <view class="nav-bar">
+    <text class="nav-title">我的项目</text>
+    <image class="nav-icon" src="/static/create.png" bindtap="createnewProject"/>
+  </view>
+  <view class="page__bd">
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd" bindtap="toggleProjects" data-type="created">
+        <text>我创建的项目</text>
+        <image class="toggle-icon" src="{{showCreated ? '/static/down.png' : '/static/right.png'}}" />
+      </view>
+      <view class="weui-panel__bd" wx:if="{{showCreated}}">
+        <block wx:for="{{createdProjects}}" wx:key="id">
+          <navigator class="weui-media-box weui-media-box_appmsg" url="/pages/projectdetails/createdproject/createdproject?projectId={{item.id}}">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb" src="/static/pic.png" alt="项目图片" />
+            </view>
+            <view id="{{item.name}}" class="weui-media-box__bd">
+              <text class="weui-media-box__title">{{item.name}}</text>
+              <view class="weui-media-box__desc">{{item.introduction}}</view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd" bindtap="toggleProjects" data-type="joined">
+        <text>我参加的项目</text>
+        <image class="toggle-icon" src="{{showJoined ? '/static/down.png' : '/static/right.png'}}" />
+      </view>
+      <view class="weui-panel__bd" wx:if="{{showJoined}}">
+        <block wx:for="{{joinedProjects}}" wx:key="id">
+          <navigator class="weui-media-box weui-media-box_appmsg" url="/pages/projectdetails/joinedproject/joinedproject?projectId={{item.id}}">
+            <view class="weui-media-box__hd">
+              <image class="weui-media-box__thumb" src="/static/pic.png" alt="项目图片" />
+            </view>
+            <view id="{{item.name}}" class="weui-media-box__bd">
+              <text class="weui-media-box__title">{{item.name}}</text>
+              <view class="weui-media-box__desc">{{item.introduction}}</view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  </view>
+</scroll-view>

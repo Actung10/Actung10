@@ -1,0 +1,164 @@
+/* pages/projectdetails/createdproject/createdproject.wxss */
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 保证内容靠左对齐 */
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.back-icon {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-left: 235rpx;
+}
+
+.nav-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 220rpx;
+}
+
+.content {
+  width: 100%;
+}
+
+.divider {
+  height: 1rpx; /* 分隔线高度 */
+  background-color: #eee; /* 分隔线颜色 */
+  width: 100%; /* 分隔线宽度 */
+  margin-top: 20rpx; /* 分隔线与项目文字的间距 */
+}
+
+.project-info, .project-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.initiator, .mentor {
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.avatar {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.members, .status {
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  font-size: 30rpx;
+}
+
+.project-intro, .project-content {
+  margin-top: 20rpx;
+  margin-left: 10rpx;
+  margin-right: 20rpx;
+  /*padding: 20rpx;
+  background-color: #f8f8f8;*/
+  border-radius: 10rpx;
+}
+
+.intro-title, .content-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.join-button {
+  margin-top: 40rpx;
+}
+
+button {
+  position: fixed; /* 固定在底部 */
+  bottom: 20rpx; /* 底部间距 */
+  left: 50%; /* 横向50%的位置 */
+  transform: translateX(-50%); /* 向左移动自身宽度的50%，以实现居中 */
+  width: 80%; /* 宽度为80%屏幕宽度，可根据实际需要调整 */
+  padding: 20rpx; /* 按钮内边距 */
+  background-color: #1aad19; /* 按钮背景颜色 */
+  color: white; /* 文字颜色 */
+  border: none; /* 无边框 */
+  border-radius: 5rpx; /* 圆角边框 */
+  box-shadow: 0 4rpx 8rpx rgba(0, 0, 0, 0.1); /* 按钮阴影，可选 */
+}
+
+
+/* 标签按钮样式 */
+.tabs {
+  display: flex;
+  justify-content: flex-start; /* 按钮紧挨在一起，不平均分配空间 */
+  align-items: center;
+  margin: 20rpx 0; /* 在导航栏和标签按钮之间添加一些间距 */
+  padding: 0 20rpx; /* 左右留白 */
+}
+
+.tab-item {
+  margin-right: 20rpx; /* 按钮之间的间隔 */
+  text-align: center;
+  position: relative; /* 为底线绝对定位 */
+}
+
+.tab-text {
+  display: inline-block; /* 使底线能够正确定位 */
+  padding: 10rpx;
+  color: black; /* 默认文字颜色 */
+  font-size: 16px; /* 设置字体大小 */
+  font-weight: bold; /* 设置字体加粗 */
+}
+
+.tab-text.active {
+  color: green; /* 当前激活的按钮文字颜色为绿色 */
+}
+
+.tab-underline {
+  display: block;
+  width: 100%;
+  height: 2rpx; /* 底线高度 */
+  background-color: black; /* 默认与文字颜色一致 */
+  position: absolute;
+  bottom: 0; /* 底线位置 */
+  left: 0;
+  transition: background-color 0.3s; /* 颜色变化动画 */
+  opacity: 0; /* 默认不显示 */
+}
+
+.tab-underline.active {
+  background-color: green; /* 当前激活的按钮底线颜色为绿色 */
+  opacity: 1; /* 激活时显示 */
+}
+
+.weui-cell__ft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 33rpx; /* 根据实际图标大小调整 */
+  height: 31rpx; /* 根据实际图标大小调整 */
+}
+
+image{height:50px}.weui-cells .demo_badge_tips{font-size:1rem;vertical-align:middle}.weui-cells .demo_badge_tips + .weui-badge{margin-left:5px;margin-right:5px}.demo_badge_cells .weui-cell__hd{position:relative;margin-right:10px}.demo_badge_cells .weui-cell__hd image{width:50px;display:block}.demo_badge_cells .weui-cell__hd .weui-badge{position:absolute;top:-.4em;right:-.4em}.demo_badge_cells .weui-cell__bd .demo_badge_title{vertical-align:middle}.demo_badge_cells .weui-cell__bd .demo_badge_title + .weui-badge{margin-left:5px}.demo_badge_cells .weui-cell__bd .demo_badge_desc{font-size:0.7647058823529411rem;color:#888}

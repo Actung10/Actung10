@@ -1,0 +1,27 @@
+<!--pages/log/log.wxml-->
+<navigation-bar title="Project Partener" back="{{false}}"
+ color="black" background="#DEDEDE"></navigation-bar>
+
+ <view class="container">
+  <view class="login-title">账号密码登录</view>
+  <view class="input-group">
+    <view class="input-label">学号</view>
+    <view class="input-box">
+      <input type="text" placeholder="请输入学号" bindinput="inputUsername" class="input"/>
+    </view>
+  </view>
+  <view class="input-group">
+    <view class="input-label">密码</view>
+    <view class="input-box">
+      <input type="password" placeholder="请输入密码" password= true bindinput="inputPassword" class="input"/>
+    </view>
+  </view>
+  <button class="login-button" bindtap="login">登录</button>
+  <view class="other-actions">
+    <view class="action-buttons">
+      <button class="action-button" bindtap="toCaptchaLogin">验证码登录</button>
+      <button class="action-button" bindtap="toForgotPassword">忘记密码?</button>
+      <button class="action-button" bindtap="toRegister">新用户注册</button>
+    </view>
+  </view>
+</view>

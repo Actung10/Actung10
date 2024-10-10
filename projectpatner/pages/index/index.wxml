@@ -1,0 +1,153 @@
+<!--index.wxml-->
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+<navigation-bar title="Project Partener" back="{{false}}"
+ color="black" background="#DEDEDE"></navigation-bar>
+
+  <view class="weui-search-bar weui-search-bar_filled-grey {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+			<form class="weui-search-bar__form"
+      aria-role="combobox"
+      aria-haspopup="true"
+      aria-expanded="{{inputVal.length > 0 ? 'true' : 'false'}}"
+      aria-owns="searchResult"
+      >
+        <view aria-hidden="true" class="weui-search-bar__box">
+          <i class="weui-icon-search"></i>
+          <view class="weui-search-bar__words" bindtap=searchInput">搜索</view>
+          <input aria-controls="searchResult" type="text" class="weui-search-bar__input {{isFocus ? 'weui-search-bar__input_focus' : ''}}" placeholder="搜索联系人" value="{{inputVal}}" bindinput="inputTyping" focus="{{inputShowed}}" bindblur="blurInput"
+
+          />
+          <view class="weui-search-bar__mask"></view>
+          <view aria-role="button" aria-label="清除" class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></view>
+        </view>
+        <label class="weui-search-bar__label" bindtap="showInput">
+          <i class="weui-icon-search"></i>
+          <span class="weui-search-bar__label__text">搜索</span>
+        </label>
+			</form>
+      <view aria-role="button" class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+		</view>
+  <view class="tabs">
+    <view class="tab-item" bindtap="switchTab" data-type="contacts">
+      <text class="tab-text {{currentTab === 'contacts' ? 'active' : ''}}">联系人</text>
+      <view class="tab-underline {{currentTab === 'contacts' ? 'active' : ''}}"></view>
+    </view>
+    <view class="tab-item" bindtap="switchTab" data-type="projects">
+      <text class="tab-text {{currentTab === 'projects' ? 'active' : ''}}">项目群组</text>
+      <view class="tab-underline {{currentTab === 'projects' ? 'active' : ''}}"></view>
+    </view>
+    <view class="tab-item" bindtap="switchTab" data-type="notifications">
+      <text class="tab-text {{currentTab === 'notifications' ? 'active' : ''}}">通知</text>
+      <view class="tab-underline {{currentTab === 'notifications' ? 'active' : ''}}"></view>
+    </view>
+  </view>
+  <view class="content">
+    <block wx:if="{{currentTab === 'contacts'}}">
+      <!-- 联系人内容 -->
+      <view class="weui-cells demo_badge_cells">
+  <view aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active" aria-role="option">
+    <view class="weui-cell__hd" aria-hidden="true">
+      <image src="/static/tabbar/me.png" alt></image>
+      <text id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</text>
+    </view>
+    <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+      <text>甲同学</text>
+      <view class="demo_badge_desc">好的</view>
+    </view>
+    <view class="weui-cell__ft" aria-hidden="true">
+      <!-- 添加一个小图标 -->
+      <image class="icon" src="/static/new8.png" alt="小图标"></image>
+    </view>
+  </view>
+</view>
+<view class="weui-cells demo_badge_cells">
+  <view aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active" aria-role="option">
+    <view class="weui-cell__hd" aria-hidden="true">
+      <image src="/static/tabbar/me.png" alt></image>
+      <text id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</text>
+    </view>
+    <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+      <text>丙同学</text>
+      <view class="demo_badge_desc">OK</view>
+    </view>
+    <view class="weui-cell__ft" aria-hidden="true">
+      <!-- 添加一个小图标 -->
+      <image class="icon" src="/static/new8.png" alt="小图标"></image>
+    </view>
+  </view>
+</view>
+    </block>
+    <block wx:if="{{currentTab === 'projects'}}">
+      <!-- 项目群组内容 -->
+      <view class="weui-cells demo_badge_cells">
+  <view aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active" aria-role="option">
+    <view class="weui-cell__hd" aria-hidden="true">
+      <image src="/static/tabbar/me.png" alt></image>
+      <text id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</text>
+    </view>
+    <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+      <text>自动驾驶技术</text>
+      <view class="demo_badge_desc">完成了</view>
+    </view>
+    <view class="weui-cell__ft" aria-hidden="true">
+      <!-- 添加一个小图标 -->
+      <image class="icon" src="/static/new8.png" alt="小图标"></image>
+    </view>
+  </view>
+</view>
+<view class="weui-cells demo_badge_cells">
+  <view aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active" aria-role="option">
+    <view class="weui-cell__hd" aria-hidden="true">
+      <image src="/static/tabbar/me.png" alt></image>
+      <text id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</text>
+    </view>
+    <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+      <text>游戏世界构建</text>
+      <view class="demo_badge_desc">最后一关怎么设计？</view>
+    </view>
+    <view class="weui-cell__ft" aria-hidden="true">
+      <!-- 添加一个小图标 -->
+      <image class="icon" src="/static/new8.png" alt="小图标"></image>
+    </view>
+  </view>
+</view>
+<view class="weui-cells demo_badge_cells">
+  <view aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active" aria-role="option">
+    <view class="weui-cell__hd" aria-hidden="true">
+      <image src="/static/tabbar/me.png" alt></image>
+      <text id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</text>
+    </view>
+    <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+      <text>深度学习探索</text>
+      <view class="demo_badge_desc">有什么改进的想法吗？</view>
+    </view>
+    <view class="weui-cell__ft" aria-hidden="true">
+      <!-- 添加一个小图标 -->
+      <image class="icon" src="/static/new8.png" alt="小图标"></image>
+    </view>
+  </view>
+</view>
+    </block>
+    <block wx:if="{{currentTab === 'notifications'}}">
+      <!-- 通知内容 -->
+      <view class="weui-cells demo_badge_cells">
+  <view aria-labelledby="b1_txt1" aria-describedby="b1_n1" class="weui-cell weui-cell_active" aria-role="option">
+    <view class="weui-cell__hd" aria-hidden="true">
+      <image src="/static/system.png" alt></image>
+      <text id="b1_n1" class="weui-badge" aria-label="，8个新通知">8</text>
+    </view>
+    <view class="weui-cell__bd" aria-hidden="true" id="b1_txt1">
+      <text>系统通知</text>
+      <view class="demo_badge_desc">您有一个新的项目申请</view>
+    </view>
+    <view class="weui-cell__ft" aria-hidden="true">
+      <!-- 添加一个小图标 -->
+      <image class="icon" src="/static/new8.png" alt="小图标"></image>
+    </view>
+  </view>
+</view>
+    </block>
+  </view>
+</scroll-view>
+
+
+

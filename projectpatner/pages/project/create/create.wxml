@@ -1,0 +1,38 @@
+<!--pages/project/create/create.wxml-->
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+<navigation-bar title="Project Partener" back="{{false}}"
+ color="black" background="#DEDEDE"></navigation-bar>
+
+ <view class="container">
+  <view class="header">
+    <navigator class="back-button" url="javascript:;" bindtap="goBack">
+      <image class="icon" src="/static/button/back.png" />
+      <text class="back-text">返回</text>
+    </navigator>
+    <text class="title">创建项目</text>
+  </view>
+  <view class="form">
+    <view class="form-item">
+      <text class="item-label">项目名称</text>
+      <input class="input" placeholder="请输入项目名称" bindinput="inputProjectName" />
+    </view>
+    <view class="form-item">
+      <text class="item-label">项目简介</text>
+      <input class="input" placeholder="请输入项目简介" bindinput="inputProjectIntroduction" />
+    </view>
+    <view class="form-item">
+      <text class="item-label">项目内容</text>
+      <textarea class="textarea" placeholder="请输入项目的具体介绍和希望合作的专业等内容" bindinput="inputProjectContent" />
+    </view>
+    <view class="form-item">
+      <text class="item-label">指导教师</text>
+      <input class="input" placeholder="请输入指导教师" bindinput="inputMentor" />
+    </view>
+    <view class="form-item">
+      <text class="item-label">项目人数</text>
+      <input class="input" placeholder="请输入项目人数" bindinput="inputProjectMembers" />
+    </view>
+  </view>
+  <button class="publish-button" bindtap="publishProject">发布项目</button>
+</view>
+</scroll-view>

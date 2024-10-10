@@ -1,0 +1,98 @@
+{
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "projectpatner",
+  "setting": {
+    "compileHotReLoad": true,
+    "skylineRenderEnable": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/projectdetails/modifyproject/modifyproject",
+          "pathName": "pages/projectdetails/modifyproject/modifyproject",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/projectdetails/modifyproject/modifyproject",
+          "pathName": "pages/projectdetails/modifyproject/modifyproject",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/projectdetails/joinedproject/joinedproject",
+          "pathName": "pages/projectdetails/joinedproject/joinedproject",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/projectdetails/createdproject/createdproject",
+          "pathName": "pages/projectdetails/createdproject/createdproject",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/projectdetails/projectdetail/apply",
+          "pathName": "pages/projectdetails/projectdetail/apply",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/projectdetails/projectdetail/projectdetail",
+          "pathName": "pages/projectdetails/projectdetail/projectdetail",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/project/project",
+          "pathName": "pages/project/project",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/me/textarea/textarea",
+          "pathName": "pages/me/textarea/textarea",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/home/home",
+          "pathName": "pages/home/home",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/project/create/create",
+          "pathName": "pages/project/create/create",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "pages/me/me",
+          "pathName": "pages/me/me",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

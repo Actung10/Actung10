@@ -1,0 +1,78 @@
+<!--pages/projectdetails/joinedproject/joinedproject.wxml-->
+<scroll-view class="scroll-view" scroll-y type="list" style="height: 100%;">
+  <navigation-bar title="{{project.name}}" back="{{false}}" color="black" background="#DEDEDE"></navigation-bar>
+  <view class="container">
+    <view class="header">
+      <image class="back-icon" src="/static/button/back.png" bindtap="goBack"/>
+      <text class="title">项目详情</text>
+      <image class="nav-icon" src="/static/create.png" bindtap="modifyProject"/>
+    </view>
+    <view class="tabs">
+      <!-- Tab buttons -->
+      <view class="tab-item" bindtap="switchTab" data-type="projectDetails">
+        <text class="tab-text {{currentTab === 'projectDetails' ? 'active' : ''}}">项目详情</text>
+        <view class="tab-underline {{currentTab === 'projectDetails' ? 'active' : ''}}"></view>
+      </view>
+      <view class="tab-item" bindtap="switchTab" data-type="projectMembers">
+        <text class="tab-text {{currentTab === 'projectMembers' ? 'active' : ''}}">项目成员</text>
+        <view class="tab-underline {{currentTab === 'projectMembers' ? 'active' : ''}}"></view>
+      </view>
+    </view>
+    <view class="content">
+      <!-- 项目详情内容 -->
+      <block wx:if="{{currentTab === 'projectDetails'}}">
+        <view class="project-info">
+          <view class="initiator">
+            <text>发起人：</text>
+            <image class="avatar" src="/static/tabbar/me.png" />
+            <text>{{project.initiator}}</text>
+          </view>
+          <view class="mentor">
+            <text>指导教师：</text>
+            <image class="avatar" src="/static/tabbar/me.png" />
+            <text>{{project.mentor}}</text>
+          </view>
+        </view>
+        <view class="project-status">
+          <view class="members">
+            <text>参与人数：{{project.currentMembersCount}}/{{project.totalMembers}}人</text>
+          </view>
+          <view class="status">
+            <text>当前状态：{{project.status}}</text>
+          </view>
+        </view>
+        <view class="divider" />
+        <view class="project-intro">
+          <text class="intro-title">项目简介</text>
+          <view class="intro-content">
+            <text>{{project.introduction}}</text>
+          </view>
+        </view>
+        <view class="project-content">
+          <text class="content-title">项目内容</text>
+          <view class="content-text">
+            <text>{{project.content}}</text>
+          </view>
+        </view>
+      </block>
+      <!-- 项目成员内容 -->
+      <block wx:elif="{{currentTab === 'projectMembers'}}">
+        <view class="weui-cells demo_badge_cells">
+          <block wx:for="{{project.members}}" wx:key="*this">
+            <view class="weui-cell weui-cell_active" aria-role="option">
+              <view class="weui-cell__hd">
+                <image src="/static/tabbar/me.png" alt="成员头像" />
+              </view>
+              <view class="weui-cell__bd">
+                <text>{{item}}</text> <!-- item 表示数组中的当前项 -->
+              </view>
+            </view>
+          </block>
+        </view>
+        <view class="join-button">
+          <button bindtap="exitProject">退出项目</button>
+        </view>
+      </block>
+    </view>
+  </view>
+</scroll-view>

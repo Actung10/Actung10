@@ -1,0 +1,96 @@
+/* pages/me/me.wxss */
+.container {
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 保证内容靠左对齐 */
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 100rpx; /* 头像宽度 */
+  height: 100rpx; /* 头像高度 */
+  border-radius: 50%; /* 圆形头像 */
+  margin-right: 20rpx; /* 头像与名字之间的间距 */
+  position: absolute; /* 绝对定位使头像靠左 */
+}
+
+.user-info {
+  margin-left: 130rpx; /* 用户信息的左边距，与头像大小加上一点间距 */
+}
+
+.username {
+  font-size: 36rpx; /* 用户名字体大小 */
+  color: #333; /* 黑色 */
+}
+
+.signature {
+  font-size: 28rpx; /* 个签字体大小 */
+  color: #666; /* 签名颜色 */
+  margin-top: 10rpx; /* 签名与用户名之间的间距 */
+}
+
+.projects {
+  font-size: 32rpx; /* 项目数量字体大小 */
+  color: #333;
+  margin-top: 30rpx; /* 与个签的间距 */
+  margin-left: 20rpx; /* 与头像同宽的左边距，确保内容不与头像重叠 */
+}
+
+.divider {
+  height: 3rpx; /* 分隔线高度 */
+  background-color: #eee; /* 分隔线颜色 */
+  width: 100%; /* 分隔线宽度 */
+  margin-top: 20rpx; /* 分隔线与项目文字的间距 */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20rpx;
+}
+
+.custom-button-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* 按钮与页面一样宽 */
+  height: 100rpx; /* 根据需要设置固定高度 */
+  padding: 10rpx 0; /* 上下填充，可根据需要调整 */
+  box-sizing: border-box; /* 边框计算在宽度内 */
+  margin-bottom: 20rpx; /* 按钮之间的间距 */
+}
+
+.icon {
+  width: 32rpx; /* 图标尺寸 */
+  height: 32rpx; /* 图标尺寸 */
+}
+
+.left-icon {
+  margin-left: 20rpx; /* 左边距，确保图标靠左 */
+}
+
+.button-text {
+  /* 文字紧跟左边图标 */
+  margin-left: 10rpx; /* 文字与左边图标的间距 */
+  font-size: 28rpx; /* 文字大小 */
+  color: #333333; /* 文字颜色 */
+  flex-grow: 1; /* 文字占据剩余空间 */
+  text-align: left; /* 文字靠左显示 */
+}
+
+.right-icon {
+  margin-right: 20rpx; /* 右边距，确保图标靠右 */
+}
+
+.scroll-y {
+  overflow-y: auto; /* 允许纵向滚动 */
+}
