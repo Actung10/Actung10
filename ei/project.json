@@ -1,0 +1,10 @@
+{
+    "project_id": 1,
+    "name": "科学研究项目",
+    "initiator": "张三",
+    "supervisor": "李教授",
+    "summary": "项目的概要",
+    "content": "项目的内容",
+    "current_members": 5,
+    "total_members": 10
+}
